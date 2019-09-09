@@ -20,11 +20,11 @@ import sys, os
 """
 def verify(m,d,y):
     if m > 12 or m < 1:
-        return (False,"invalid month")
+        return (False,"invalid: month must be 1-12")
     elif d > 31 or d <1:
-        return (False,"invalid day")
+        return (False,"invalid: day must be 1-31")
     elif y > 99 or y < 0:
-        return (False,"invalid year")
+        return (False,"invalid: year must be 00-99")
     return (True, ";^)")
 
 """
@@ -50,20 +50,21 @@ def is_Magic(m,d,y):
     Entry point function
 """
 if __name__ == "__main__":
-    date = input("input date (mm/dd/yy)\n")
+    is_Valid = (False, -1)
+    while(not is_Valid[0]):
+        date = input("input date (mm/dd/yy)\n")
     
-    date_List = date.split('/')
+        date_List = date.split('/')
     
-    m = int(date_List[0])
-    d = int(date_List[1])
-    y = int(date_List[2])
+        m = int(date_List[0])
+        d = int(date_List[1])
+        y = int(date_List[2])
 
-    is_Valid = verify(m,d,y)
-    if is_Valid[0]:
-        is_Magic(m,d,y)
-    else:
-        print(is_Valid[1])
-
+        is_Valid = verify(m,d,y)
+        if is_Valid[0]:
+            is_Magic(m,d,y)
+            
+    
 
 
 
