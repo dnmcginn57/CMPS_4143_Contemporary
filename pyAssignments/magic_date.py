@@ -50,7 +50,10 @@ def is_Magic(m,d,y):
     Entry point function
 """
 if __name__ == "__main__":
+    
     is_Valid = (False, -1)
+    
+    #loop until valid entry
     while(not is_Valid[0]):
         date = input("input date (mm/dd/yy)\n")
     
@@ -61,9 +64,10 @@ if __name__ == "__main__":
         y = int(date_List[2])
 
         is_Valid = verify(m,d,y)
+        
         if is_Valid[0]:
             is_Magic(m,d,y)
-            
+
     
 
 
