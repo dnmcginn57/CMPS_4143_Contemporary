@@ -1,0 +1,16 @@
+David McGinn
+CMPS 4143
+10-30-19
+A simple game allowing the user to guess a number chosen
+At random
+
+
+I am thinking of a number between 1 & 100
+50
+Lower
+25
+Higher
+40
+Lower
+30
+correct you got it in 4 Tries
